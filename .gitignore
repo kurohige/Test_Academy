@@ -1,0 +1,3 @@
+/results
+batch.bat
+call robot -d results rf.robot
