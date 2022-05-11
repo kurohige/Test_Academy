@@ -46,5 +46,20 @@ exercise to be succesfully completed.
 In this section of the documentation I'll go over the two python libraries or classes that are used as the testing object for this exercise. 
 The name of this two files is *cmds_jose.py* and *rps-server_jose.py*.
 
-#### cmds_jose.py
+#### --cmds_jose.py
+
+From the very beginning in this file we can see something that is common in all programming language, that being
+a place for declearing and importing classes or libraries, the class that is imported first is the ***requests*** library
+in a most simple description what ***requests*** library does is abstracting the complexities of making request behind a simple
+API, that way you can focus on interacting with sercies and consuming data of any application. 
+
+The second library being imported into this document is the ***re*** library which refers to the Regular expression operations library. 
+
+The class itself is what I would consider and mini API that serves as an interface and that allows comunication between the server and 
+the automated test, this one also serves as delimitator between the different stages of a transition circuit, process or table. I'm not 
+what term to use in this case. 
+
+In my opinion the most important piece of code in this is the function *send_cmds* as it is the one that recieve the arguments from the robot test 
+file and is the one that allows for the transition of states within the server state machine.
+the command *SetPower* allows to set the current value of the state and the command *GetPower* returns the state in which we are currently located. 
 
