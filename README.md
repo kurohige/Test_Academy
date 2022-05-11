@@ -2,10 +2,11 @@
 ### Robot Framework Code: 
 *In order to show a little of my understanding when it comes to Robot framework and with the purpose to develop more of this one* 
 *I'll be describing a the code that was created for this exercise work* 
-#### Robot Framework:
+### Robot Framework File:
 In the first exercise we have the filed named _rf_jose.robot_ , this file contains the test cases that are to be checked for the 
 exercise to be succesfully completed. 
-```
+
+```python
 *** Settings ***
 
 # First section in the structure of a robot framework file, here we will include and/or import the libraries 
@@ -39,3 +40,11 @@ exercise to be succesfully completed.
 # in this exercise we can see a named argument syntax within the keywords section, and making use of the imported library
 # *cmds_jose.py*
 ```
+
+### Python Library/Class
+
+In this section of the documentation I'll go over the two python libraries or classes that are used as the testing object for this exercise. 
+The name of this two files is *cmds_jose.py* and *rps-server_jose.py*.
+
+#### cmds_jose.py
+
