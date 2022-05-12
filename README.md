@@ -49,11 +49,11 @@ The name of this two files is *cmds_jose.py* and *rps-server_jose.py*.
 #### -- cmds_jose.py
 
 From the very beginning in this file we can see something that is common in all programming language, that being
-a place for declearing and importing classes or libraries, the class that is imported first is the ***requests*** library
-in a most simple description what ***requests*** library does is abstracting the complexities of making request behind a simple
+a place for declearing and importing classes or libraries, the class that is imported first is the "***requests***" library
+in a most simple description what "***requests***" library does is abstracting the complexities of making request behind a simple
 API, that way you can focus on interacting with sercies and consuming data of any application. 
 
-The second library being imported into this document is the ***re*** library which refers to the Regular expression operations library. 
+The second library being imported into this document is the "***re***" library which refers to the Regular expression operations library. 
 
 The class itself is what I would consider and mini API that serves as an interface and that allows comunication between the server and 
 the automated test, this one also serves as delimitator between the different stages of a transition circuit, process or table. I'm not 
@@ -85,6 +85,15 @@ This piece of code, just like it was explained for ***cmds_jose.py*** file impor
 library. 
 ***flask_httpauth*** is a Flask extension that attempts to simplifi the use of HTTP authentication by using Flask Routes, the specific 
 library being imported is ***HTTPBasicAuth***, for more indept information for the usage of this library you go [here](https://flask-httpauth.readthedocs.io/en/latest/)
+
+The second piece of code that we can go over is:
+```python
+app = Flask(__name__)
+auth = HTTPBasicAuth()
+```
+A lot of developers don't really stop to think why do we pass the __name__  argument as the first one in Flask, I don't believe it 
+is necessary to go over all of that here, but you can check [this link](https://blog.miguelgrinberg.com/post/why-do-we-pass-name-to-the-flask-class) to understand better
+what is going on with this important piece of the code.
 
 
 
