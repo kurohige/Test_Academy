@@ -46,7 +46,7 @@ exercise to be succesfully completed.
 In this section of the documentation I'll go over the two python libraries or classes that are used as the testing object for this exercise. 
 The name of this two files is *cmds_jose.py* and *rps-server_jose.py*.
 
-#### --cmds_jose.py
+#### -- cmds_jose.py
 
 From the very beginning in this file we can see something that is common in all programming language, that being
 a place for declearing and importing classes or libraries, the class that is imported first is the ***requests*** library
@@ -61,5 +61,31 @@ what term to use in this case.
 
 In my opinion the most important piece of code in this is the function *send_cmds* as it is the one that recieve the arguments from the robot test 
 file and is the one that allows for the transition of states within the server state machine.
-the command *SetPower* allows to set the current value of the state and the command *GetPower* returns the state in which we are currently located. 
+the command *SetPower* allows to set the current value of the state and the command *GetPower* returns the state in which we are currently located. Onto the next file then!
+
+#### -- rps-server_jose.py
+
+This file is what we will be testing, it represents a Remote Power Supply, RPS, as we do not have a RPS hardware, we used this one to simulate
+one. In this case the RPS has a http server and users would be able to send commands to turn it on/off by using the http request, this 
+on/off options function as two different state. In order to run the RPS server we will use Flask.
+Flask is a web framework, a python module that let's you create web applications and unlike Django framework it is easier to get started with
+as it doesn't have a great learning curve. 
+
+***It is important to mention that Flask has been installed in a virutal environment separate from the file where this project is located,*** 
+***this is important to consider as it is known that a system wide package installation may cause conflicts.***
+
+That being address we can continue with describing what every piece of code within the file does:
+the first portion of the code:
+
+```python
+from flask import Flask, request
+from flask_httpauth import HTTPBasicAuth
+```
+This piece of code, just like it was explained for ***cmds_jose.py*** file imports the Flask into python and also imports the ***request*** 
+library. 
+***flask_httpauth*** is a Flask extension that attempts to simplifi the use of HTTP authentication by using Flask Routes, the specific 
+library being imported is ***HTTPBasicAuth***, for more indept information for the usage of this library you go [here](https://flask-httpauth.readthedocs.io/en/latest/)
+
+
+
 
