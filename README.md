@@ -96,5 +96,11 @@ is necessary to go over all of that here, but you can check [this link](https://
 what is going on with this important piece of the code.
 
 
+The next line in the code refers to a HTTP basic autentication(BA) implementation, it is the simplest technique for enforcing access controls
+web resources by using standard fields in the HTTP header, it is important to note that it does not require cookies, session identifiers or login pages. 
+In this exercise the user credentials used are hard-coded values, this ones are used when the flask callback function  "***login_required***"
+is called for validation or authentication. in this exercise password verification is not inforced. 
 
+The next functions defined within the code used to request information from the RPS, in brief all of them serve as an API that retrieves,
+updates and returns any update requested or done to the RPS. 
 
